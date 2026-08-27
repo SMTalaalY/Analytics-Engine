@@ -102,8 +102,6 @@ Analytics-Engine/
 │       │   ├── graphs.py        16 chart series
 │       │   ├── registry.py      Scope → function mapping
 │       │   └── routes.py        /diversity blueprint
-│       ├── demographics/        ← scaffolded
-│       └── summary/             ← scaffolded
 ├── data/sample/                 Synthetic data generator
 ├── docs/SCHEMA.md               Expected columns and config frames
 └── tests/
@@ -133,9 +131,7 @@ dispatch any subset of them concurrently without special-casing.
 
 ### Demographics and Summary
 
-Scaffolded, not yet implemented. Follow the four-file pattern in
-`src/modules/diversity/`: `kpi_cards.py`, `graphs.py`, `registry.py`,
-`routes.py`, then register the blueprint in `src/app.py`.
+Scaffolded, not yet implemented. 
 
 ---
 
@@ -207,10 +203,6 @@ cp .env.example .env
 cp config/graph_ids.example.json config/graph_ids.json
 ```
 
-Fill in `.env`, then implement the four query methods in
-`src/services/data_cache_service.py` against your database. The expected
-columns are documented in [docs/SCHEMA.md](docs/SCHEMA.md).
-
 To work without a database, generate a synthetic dataset:
 
 ```bash
@@ -265,8 +257,6 @@ from gitignored local files:
 
 ## Roadmap
 
-- [ ] Demographics module
-- [ ] Summary module
 - [ ] Test coverage for the shared preprocessing and result builders
 - [ ] Redis-backed cache as an alternative to parquet
 - [ ] OpenAPI spec for the scope contract
