@@ -1,29 +1,32 @@
-"""
-Canonical keys for the chart payload contract.
-
-The frontend consumes a fixed shape per data point: one X value and up to four
-Y values, each with a display name. Keeping these as constants prevents the
-key drift that happens when 150+ analytics functions each hand-roll their dict.
-"""
-
-XVALUE = "XVALUE"
-YVALUE1 = "YVALUE1"
-YVALUE2 = "YVALUE2"
-YVALUE3 = "YVALUE3"
-YVALUE4 = "YVALUE4"
-
-NAME1 = "NAME1"
-NAME2 = "NAME2"
-NAME3 = "NAME3"
-NAME4 = "NAME4"
-
-# Dimension columns used for filtering across every module.
-CLIENT_INDEX = "ClientIndex"
-CITY_INDEX = "CityIndex"
-LOCATION_INDEX = "LocationIndex"
-DEPARTMENT_INDEX = "DepartmentIndex"
-BU_INDEX = "BUIndex"
-EMPLOYEE_INDEX = "EmployeeIndex"
-
-# Status flag for an active employment record.
-STATUS_ACTIVE = 1
+{
+  "_comment": "Copy to config/graph_ids.json and replace with your deployment's chart IDs. graph_ids.json is gitignored.",
+  "diversity": {
+    "diversity_gender_pay_gap": 1001,
+    "diversity_in_leadership": 1002,
+    "diversity_hiring_rate": 1003,
+    "diversity_training_participation": 1004,
+    "diversity_candidates_interviewed": 1005,
+    "diversity_disability_inclusion_rate": 1006,
+    "diversity_retention_rate": 1007,
+    "diversity_gender_balance_in_promotion": 1008,
+    "diversity_workforce_flexibility": 1009,
+    "diversity_score_index": 1010,
+    "diversity_gender_ratio": 1011,
+    "diversity_female_percentage": 1012,
+    "diversity_female_percentage_by_business_unit": 1013,
+    "diversity_female_percentage_by_department": 1014,
+    "diversity_headcount_by_gender": 1015,
+    "diversity_by_tenure": 1016,
+    "diversity_by_age": 1017,
+    "diversity_by_business_unit": 1018,
+    "diversity_by_department": 1019,
+    "diversity_female_headcount_by_job_level": 1020,
+    "diversity_headcount_by_gender_and_job_level": 1021,
+    "diversity_gender_mix": 1022,
+    "diversity_gender_mix_by_grade": 1023,
+    "diversity_gender_mix_by_location": 1024,
+    "diversity_gender_mix_monthly": 1025,
+    "diversity_gender_mix_quarterly": 1026,
+    "diversity_gender_mix_yearly": 1027
+  }
+}
